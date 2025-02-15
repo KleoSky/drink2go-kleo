@@ -1,0 +1,132 @@
+.advantages {
+  width: 320px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.advantages__wrapper {
+  width: 280px;
+  display: grid;
+  grid-template-rows: 50px auto auto min-content 60px;
+  margin: 0 auto;
+}
+
+.advantages__badge {
+  grid-row: 2 / 3;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 4px;
+  color: var(--bg-accent, #000080);
+}
+
+.advantages__title {
+  grid-row: 3 / 4;
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 36px;
+}
+
+.advantages__list {
+  grid-row: 4 / 5;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.advantages__item {
+  position: relative;
+}
+
+.advantages__item::before {
+  content: "";
+  display: block;
+  width: 52px;
+  height: 56px;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 52px 56px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.advantages__item--speed::before {
+  background-image: url("../../images/speed.svg");
+}
+
+.advantages__item--fit::before {
+  background-image: url("../../images/fit.svg");
+}
+
+.advantages__item--energy::before {
+  background-image: url("../../images/energy.svg");
+}
+
+.advantages__item--eco::before {
+  background-image: url("../../images/eco.svg");
+}
+
+@media (min-width: 768px) {
+  .advantages__title {
+    font-size: 42px;
+    line-height: 1.52;
+    margin-bottom: 60px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .advantages {
+    width: 768px;
+    padding: 0 30px;
+  }
+
+  .advantages__wrapper {
+    width: 708px;
+    grid-template-rows: 60px auto auto min-content 100px;
+  }
+
+  .advantages__list {
+    display: grid;
+    grid-template-columns: repeat(2, min-content);
+    gap: 50px 30px;
+  }
+
+  .advantages__item::before {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    top: 40%;
+    transform: translateY(-60%);
+    left: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .advantages {
+    width: 1440px;
+    padding: 0 40px;
+  }
+
+  .advantages__wrapper {
+    width: 1360px;
+    grid-template-rows: 100px auto auto min-content 120px;
+  }
+
+  .advantages__title {
+    margin-bottom: 80px;
+  }
+
+  .advantages__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
