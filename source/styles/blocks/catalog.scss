@@ -1,0 +1,33 @@
+.catalog {
+  background-color: var(--bg-catalog, #aaa7ab);
+  padding: 50px 20px 44px;
+  display: grid;
+  grid-template-rows: min-content min-content auto;
+}
+
+.catalog__wrapper {
+  width: 280px;
+  margin: 0 auto;
+}
+
+.catalog__badge {
+  grid-row: 1 / 2;
+  font-size: 12px;
+  line-height: 1.33;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--bg-accent, #000080);
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.catalog__title {
+  grid-row: 2 / 3;
+  font-size: 24px;
+  line-height: 1.5;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 20px;
+}

@@ -1,16 +1,20 @@
 .main {
   width: 100%;
+}
+
+.main__wrapper {
+  width: 100%;
   margin: 0 auto;
 }
 
 @media (min-width: 768px) {
-  .main {
+  .main__wrapper {
     width: 768px;
   }
 }
 
 @media (min-width: 1440px) {
-  .main {
+  .main__wrapper {
     width: 1440px;
   }
 }
