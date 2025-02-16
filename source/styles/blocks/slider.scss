@@ -75,12 +75,21 @@
 
   .slider__button {
     mask-position: 50% 50%;
-    grid-row: 1 / 2;
+  }
+
+  .slider__button--prev {
+    grid-column: 1 / 2;
+    grid-row: 1 /-1;
+  }
+
+  .slider__button--next {
+    grid-column: 3 / 4;
+    grid-row: 1 /-1;
   }
 
   .slider__buttons-step {
     grid-column: 2 / 3;
-    grid-row: 2 / 3;
+    grid-row: 3 / 4;
     place-self: baseline center;
     display: flex;
     gap: 8px;
