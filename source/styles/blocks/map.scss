@@ -1,0 +1,19 @@
+.map,
+.map__wrapper {
+  width: 320px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .map,
+  .map__wrapper {
+    width: 768px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .map,
+  .map__wrapper {
+    width: 1440px;
+  }
+}
