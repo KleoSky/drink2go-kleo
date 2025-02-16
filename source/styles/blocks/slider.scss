@@ -6,6 +6,7 @@
   padding: 20px 3px 60px;
   box-sizing: border-box;
   width: 100%;
+  min-height: 656px;
 }
 
 .slider--flat {
@@ -46,6 +47,7 @@
   .slider {
     grid-template-columns: 80px auto 80px;
     padding: 0;
+    min-height: 828px;
   }
 
   .slider__button {
