@@ -1,1 +1,65 @@
-// Styles
+.product__image-link {
+  display: block;
+  position: relative;
+  top: 0;
+  left: 55px;
+  margin-bottom: 24px;
+}
+
+.product__title {
+  margin: 0;
+  margin-bottom: 6px;
+}
+
+.product__link {
+  font-size: 18px;
+  line-height: 1.78px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.product__description {
+  margin: 0;
+  margin-bottom: 17px;
+}
+
+.product__cost-wrapper {
+  display: flex;
+}
+
+.product__cost {
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: 600;
+  margin: 0;
+  margin-right: auto;
+  padding: 0;
+  align-self: first baseline;
+}
+
+.product__button {
+  font-size: 14px;
+  line-height: 1.43;
+  padding: 8px 20px 8px 46px;
+  font-family: inherit;
+  background-color: var(--bg-accent, #000080);
+  border: transparent;
+  border-radius: 4px;
+  color: var(--color-second, #ffffff);
+  min-height: 36px;
+  position: relative;
+}
+
+.product__button::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 16px;
+  background-image: url("../../icons/stack.svg#basket-plus");
+  background-size: 20px 16px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
