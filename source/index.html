@@ -88,7 +88,7 @@
               <div class="card__price">
                 <del class="card__price-old">295₽</del>
                 <ins class="card__price-new">225₽</ins>
-                <button class="card__price-button" type="button">Заказать</button>
+                <button class="card__price-button button-accent" type="button">Заказать</button>
               </div>
             </div>
           </div>
@@ -117,7 +117,7 @@
               <div class="card__price">
                 <del class="card__price-old">285₽</del>
                 <ins class="card__price-new">265₽</ins>
-                <button class="card__price-button" type="button">Заказать</button>
+                <button class="card__price-button button-accent" type="button">Заказать</button>
               </div>
             </div>
           </div>
@@ -146,7 +146,7 @@
               <div class="card__price">
                 <del class="card__price-old">395₽</del>
                 <ins class="card__price-new">375₽</ins>
-                <button class="card__price-button" type="button">Заказать</button>
+                <button class="card__price-button button-accent" type="button">Заказать</button>
               </div>
             </div>
           </div>
@@ -219,61 +219,65 @@
               </div>
             </fieldset>
             <fieldset class="form__choice form__choice--taste">
-              <legend>Наличие молока</legend>
-              <label>
-                <input class="form__choice form__choice--radio" type="radio" name="milk" value="Не важно" checked>
-                <span class="form__choice-label">Не важно</span>
+              <legend class="form__choice-title">Наличие молока</legend>
+              <label class="form__label">
+                <input class="form__choice-input form__choice-input--radio" type="radio" name="milk" value="Не важно" checked>
+                <span class="form__choice-label">Неважно</span>
               </label>
-              <label>
-                <input class="form__choice form__choice--radio" type="radio" name="milk" value="Только животное">
+              <label class="form__label">
+                <input class="form__choice-input form__choice-input--radio" type="radio" name="milk" value="Только животное">
                 <span class="form__choice-label">Только животное</span>
               </label>
-              <label>
-                <input class="form__choice form__choice--radio" type="radio" name="milk" value="Только растительное">
+              <label class="form__label">
+                <input class="form__choice-input form__choice-input--radio" type="radio" name="milk"
+                  value="Только растительное">
                 <span class="form__choice-label">Только растительное</span>
               </label>
-              <label>
-                <input class="form__choice form__choice--radio" type="radio" name="milk" value="Без молока" disabled>
+              <label class="form__label">
+                <input class="form__choice-input form__choice-input--radio" type="radio" name="milk" value="Без молока"
+                  disabled>
                 <span class="form__choice-label">Без молока</span>
               </label>
             </fieldset>
             <fieldset class="form__choice form__choice--origin">
-              <legend>Страна произрастания</legend>
-              <label>
-                <input class="form__choice form__choice--checkbox" type="checkbox" name="brasil" checked>
+              <legend class="form__choice-title">Страна произрастания</legend>
+              <label class="form__label">
+                <input class="form__choice-input form__choice-input--checkbox" type="checkbox" name="brasil" checked>
                 <span class="form__choice-label">Бразилия</span>
               </label>
-              <label>
-                <input class="form__choice form__choice--checkbox" type="checkbox" name="ethiopia">
+              <label class="form__label">
+                <input class="form__choice-input form__choice-input--checkbox" type="checkbox" name="ethiopia">
                 <span class="form__choice-label">Эфиопия</span>
               </label>
-              <label>
-                <input class="form__choice form__choice--checkbox" type="checkbox" name="colombia">
+              <label class="form__label">
+                <input class="form__choice-input form__choice-input--checkbox" type="checkbox" name="colombia">
                 <span class="form__choice-label">Колумбия</span>
               </label>
-              <label>
-                <input class="form__choice form__choice--checkbox" type="checkbox" name="costa-rica">
+              <label class="form__label">
+                <input class="form__choice-input form__choice-input--checkbox" type="checkbox" name="costa-rica">
                 <span class="form__choice-label">Коста-Рика</span>
               </label>
-              <label>
-                <input class="form__choice form__choice--checkbox" type="checkbox" name="peru" disabled>
+              <label class="form__label">
+                <input class="form__choice-input form__choice-input--checkbox" type="checkbox" name="peru" disabled>
                 <span class="form__choice-label">Перу</span>
               </label>
             </fieldset>
             <div class="form__buttons">
-              <button class="form__button form__button--apply" type="submit">Применить</button>
-              <button class="form__button form__button--reset" type="reset">Сбросить</button>
+              <button class="form__button form__button--apply button-accent" type="submit">Применить</button>
+              <button class="form__button form__button--reset button-accent" type="reset">Сбросить</button>
             </div>
           </form>
           <section class="catalog__select products">
             <h2 class="visually-hidden">Каталог кофейных напитков</h2>
             <div class="products__wrapper">
-              <h3 class="products__select-title">Сортировка</h3>
-              <select name="products__select-type" id="select-type">
-                <option value="По умолчанию">По умолчанию</option>
-                <option value="Сначала дешёвые">Сначала дешёвые</option>
-                <option value="Сначала дорогие">Сначала дорогие</option>
-              </select>
+              <div class="products__select-wrapper">
+                <h3 class="products__select-title">Сортировка:</h3>
+                <select name="products__select-type" id="select-type">
+                  <option class="products__select-option" value="По умолчанию">По умолчанию</option>
+                  <option class="products__select-option" value="Сначала дешёвые">Сначала дешёвые</option>
+                  <option class="products__select-option" value="Сначала дорогие">Сначала дорогие</option>
+                </select>
+              </div>
               <ul class="products__list">
                 <li class="products__item product">
                   <a class="product__image-link" href="#" tabindex="-1">
@@ -284,12 +288,14 @@
                         height="188" alt="Баночка с кофейным напитком">
                     </picture>
                   </a>
-                  <h3>
+                  <h3 class="product__title">
                     <a class="product__link" href="#">Декаф Флэт Уайт</a>
                   </h3>
-                  <p>Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                  <p class="product__cost">225₽</p>
-                  <button class="product__button" type="button">В корзину</button>
+                  <p class="product__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                  <div class="product__cost-wrapper">
+                    <p class="product__cost">225₽</p>
+                    <button class="product__button button-accent" type="button">В корзину</button>
+                  </div>
                 </li>
                 <li class="products__item product">
                   <a class="product__image-link" href="#" tabindex="-1">
@@ -300,12 +306,14 @@
                         height="188" alt="Баночка с кофейным напитком">
                     </picture>
                   </a>
-                  <h3>
+                  <h3 class="product__title">
                     <a class="product__link" href="#">Декаф Флэт Уайт</a>
                   </h3>
-                  <p>Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                  <p class="product__cost">225₽</p>
-                  <button class="product__button" type="button">В корзину</button>
+                  <p class="product__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                  <div class="product__cost-wrapper">
+                    <p class="product__cost">225₽</p>
+                    <button class="product__button button-accent" type="button">В корзину</button>
+                  </div>
                 </li>
                 <li class="products__item product">
                   <a class="product__image-link" href="#" tabindex="-1">
@@ -316,12 +324,14 @@
                         height="188" alt="Баночка с кофейным напитком">
                     </picture>
                   </a>
-                  <h3>
+                  <h3 class="product__title">
                     <a class="product__link" href="#">Декаф Флэт Уайт</a>
                   </h3>
-                  <p>Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                  <p class="product__cost">225₽</p>
-                  <button class="product__button" type="button">В корзину</button>
+                  <p class="product__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                  <div class="product__cost-wrapper">
+                    <p class="product__cost">225₽</p>
+                    <button class="product__button button-accent" type="button">В корзину</button>
+                  </div>
                 </li>
                 <li class="products__item product">
                   <a class="product__image-link" href="#" tabindex="-1">
@@ -332,12 +342,14 @@
                         height="188" alt="Баночка с кофейным напитком">
                     </picture>
                   </a>
-                  <h3>
+                  <h3 class="product__title">
                     <a class="product__link" href="#">Декаф Флэт Уайт</a>
                   </h3>
-                  <p>Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                  <p class="product__cost">225₽</p>
-                  <button class="product__button" type="button">В корзину</button>
+                  <p class="product__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                  <div class="product__cost-wrapper">
+                    <p class="product__cost">225₽</p>
+                    <button class="product__button button-accent" type="button">В корзину</button>
+                  </div>
                 </li>
                 <li class="products__item product">
                   <a class="product__image-link" href="#" tabindex="-1">
@@ -348,12 +360,14 @@
                         height="188" alt="Баночка с кофейным напитком">
                     </picture>
                   </a>
-                  <h3>
+                  <h3 class="product__title">
                     <a class="product__link" href="#">Декаф Флэт Уайт</a>
                   </h3>
-                  <p>Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                  <p class="product__cost">225₽</p>
-                  <button class="product__button" type="button">В корзину</button>
+                  <p class="product__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                  <div class="product__cost-wrapper">
+                    <p class="product__cost">225₽</p>
+                    <button class="product__button button-accent" type="button">В корзину</button>
+                  </div>
                 </li>
                 <li class="products__item product">
                   <a class="product__image-link" href="#" tabindex="-1">
@@ -364,12 +378,14 @@
                         height="188" alt="Баночка с кофейным напитком">
                     </picture>
                   </a>
-                  <h3>
+                  <h3 class="product__title">
                     <a class="product__link" href="#">Декаф Флэт Уайт</a>
                   </h3>
-                  <p>Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                  <p class="product__cost">225₽</p>
-                  <button class="product__button" type="button">В корзину</button>
+                  <p class="product__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                  <div class="product__cost-wrapper">
+                    <p class="product__cost">225₽</p>
+                    <button class="product__button button-accent" type="button">В корзину</button>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -378,9 +394,9 @@
             <h2 class="visually-hidden">Переход на другие страницы каталога</h2>
             <ul class="pagination__list">
               <li class="pagination__item">
-                <button class="pagination__button" type="button">
+                <a class="pagination__link pagination__link--prev" href="#">
                   <span class="visually-hidden">Перейти на предыдущую страницу</span>
-                </button>
+                </a>
               </li>
               <li class="pagination__item">
                 <a class="pagination__link" href="#">1</a>
@@ -392,9 +408,9 @@
                 <a class="pagination__link" href="#">3</a>
               </li>
               <li class="pagination__item">
-                <button class="pagination__button" type="button">
+                <a class="pagination__link pagination__link--next" href="#">
                   <span class="visually-hidden">Перейти на следущую страницу</span>
-                </button>
+                </a>
               </li>
             </ul>
           </section>

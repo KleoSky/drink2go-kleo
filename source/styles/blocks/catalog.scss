@@ -1,3 +1,8 @@
+.catalog__form {
+  margin-bottom: 40px;
+  position: relative;
+}
+
 .catalog {
   background-color: var(--bg-catalog, #aaa7ab);
   padding: 50px 20px 44px;
@@ -20,7 +25,7 @@
   text-align: center;
   color: var(--bg-accent, #000080);
   margin: 0;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 .catalog__title {
