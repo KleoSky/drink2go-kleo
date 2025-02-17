@@ -45,7 +45,7 @@
   position: relative;
   width: 17px;
   height: 17px;
-  border: 2px solid var(--bg-accent);
+  border: 2px solid var(--bg-accent, #000080);
   transform: rotate(45deg);
 }
 
@@ -65,19 +65,19 @@
 .slider__button--prev:focus,
 .slider__button--prev:focus-visible {
   background-color: #ffffff;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
 }
 
 .slider__button--next:hover,
 .slider__button--next:focus,
 .slider__button--next:focus-visible {
   background-color: #ffffff;
-  background-image: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));;
+  background-image: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
 }
 
 .slider__button--prev:active {
   background-color: #ffffff;
-  background-image: linear-gradient(to right, rgba(120, 89, 207, 0.25), rgba(120, 89, 207, 0));;
+  background-image: linear-gradient(to right, rgba(120, 89, 207, 0.25), rgba(120, 89, 207, 0));
 }
 
 .slider__button--next:active {
@@ -86,7 +86,7 @@
 }
 
 .slider__button:disabled.slider__button::before {
-  border: 2px solid var(--color-tertiary);
+  border: 2px solid var(--color-tertiary, #000080);
 }
 
 @media (max-width: 767px) {
