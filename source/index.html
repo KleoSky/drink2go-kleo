@@ -62,7 +62,7 @@
           <span class="visually-hidden">Показать предыдущий товар</span>
         </button>
         <div class="main__sliders sliders">
-          <div class="sliders__card card card--current" data-bg="flat">
+          <div class="sliders__card card card--current" data-bg="flat" data-index="0">
             <a class="card__link" href="#">
               <picture>
                 <source media="(min-width: 1440px)" width="600" height="600" type="image/webp"
@@ -79,18 +79,20 @@
                   height="280" alt="Кофе Декаф Флэт Уайт">
               </picture>
             </a>
-            <span class="card__badge">Новинка!</span>
-            <h2 class="card__title">Декаф Флэт Уайт</h2>
-            <p class="card__description">Свежесваренный кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским
-              молоком —
-              то, что нужно для&nbsp;расслабления после тяжёлого рабочего дня</p>
-            <div class="card__price">
-              <del class="card__price-old">295₽</del>
-              <ins class="card__price-new">225₽</ins>
-              <button class="card__price-button" type="button">Заказать</button>
+            <div class="card__content-wrapper">
+              <span class="card__badge">Новинка!</span>
+              <h2 class="card__title">Декаф Флэт Уайт</h2>
+              <p class="card__description">Свежесваренный кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским
+                молоком —
+                то, что нужно для&nbsp;расслабления после тяжёлого рабочего дня</p>
+              <div class="card__price">
+                <del class="card__price-old">295₽</del>
+                <ins class="card__price-new">225₽</ins>
+                <button class="card__price-button" type="button">Заказать</button>
+              </div>
             </div>
           </div>
-          <div class="sliders__card card" data-bg="latte">
+          <div class="sliders__card card" data-bg="latte" data-index="1">
             <a class="card__link" href="#">
               <picture>
                 <source media="(min-width: 1440px)" width="600" height="600" type="image/webp"
@@ -107,17 +109,19 @@
                   height="280" alt="Кофе Декаф Флэт Уайт">
               </picture>
             </a>
-            <span class="card__badge">Новинка!</span>
-            <h2 class="card__title">Лавандовый Латте</h2>
-            <p class="card__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и
-              лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
-            <div class="card__price">
-              <del class="card__price-old">285₽</del>
-              <ins class="card__price-new">265₽</ins>
-              <button class="card__price-button" type="button">Заказать</button>
+            <div class="card__content-wrapper">
+              <span class="card__badge">Новинка!</span>
+              <h2 class="card__title">Лавандовый Латте</h2>
+              <p class="card__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и
+                лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
+              <div class="card__price">
+                <del class="card__price-old">285₽</del>
+                <ins class="card__price-new">265₽</ins>
+                <button class="card__price-button" type="button">Заказать</button>
+              </div>
             </div>
           </div>
-          <div class="sliders__card card" data-bg="espresso">
+          <div class="sliders__card card" data-bg="espresso" data-index="2">
             <a class="card__link" href="#">
               <picture>
                 <source media="(min-width: 1440px)" width="600" height="600" type="image/webp"
@@ -134,14 +138,16 @@
                   width="280" height="280" alt="Кофе Декаф Флэт Уайт">
               </picture>
             </a>
-            <span class="card__badge">Новинка!</span>
-            <h2 class="card__title">Тройной Эспрессо</h2>
-            <p class="card__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и
-              лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
-            <div class="card__price">
-              <del class="card__price-old">395₽</del>
-              <ins class="card__price-new">375₽</ins>
-              <button class="card__price-button" type="button">Заказать</button>
+            <div class="card__content-wrapper">
+              <span class="card__badge">Новинка!</span>
+              <h2 class="card__title">Тройной Эспрессо</h2>
+              <p class="card__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и
+                лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
+              <div class="card__price">
+                <del class="card__price-old">395₽</del>
+                <ins class="card__price-new">375₽</ins>
+                <button class="card__price-button" type="button">Заказать</button>
+              </div>
             </div>
           </div>
         </div>
@@ -149,13 +155,13 @@
           <span class="visually-hidden">Показать следующий товар</span>
         </button>
         <div class="slider__buttons-step slider-pagination">
-          <button class="slider__button-step" type="button">
+          <button class="slider__button-step" type="button" data-index="0">
             <span class="visually-hidden">Показать первый товар</span>
           </button>
-          <button class="slider__button-step" type="button">
+          <button class="slider__button-step" type="button" data-index="1">
             <span class="visually-hidden">Показать следующий товар</span>
           </button>
-          <button class="slider__button-step" type="button">
+          <button class="slider__button-step" type="button" data-index="2">
             <span class="visually-hidden">Показать последний товар</span>
           </button>
         </div>
@@ -193,22 +199,22 @@
               <legend class="product-cost__title">Цена</legend>
               <div class="product-cost__slider-wrapper">
                 <div class="product-cost__slider slider-cost">
-                    <button class="slider-cost__toggle slider-cost__toggle--min" type="button">
-                      <span class="visually-hidden">Выбор минимальной стоимости</span>
-                    </button>
-                    <button class="slider-cost__toggle slider-cost__toggle--max" type="button">
-                      <span class="visually-hidden">Выбор максимальной стоимости</span>
-                    </button>
+                  <button class="slider-cost__toggle slider-cost__toggle--min" type="button">
+                    <span class="visually-hidden">Выбор минимальной стоимости</span>
+                  </button>
+                  <button class="slider-cost__toggle slider-cost__toggle--max" type="button">
+                    <span class="visually-hidden">Выбор максимальной стоимости</span>
+                  </button>
                 </div>
               </div>
               <div class="product-cost__input-wrapper">
                 <label class="product-cost__cost product-cost__cost--from" for="cost-from">
-                  <input class="product-cost__input product-cost__input--from" type="text" name="from" id="cost-from" placeholder="0"
-                    value="0">
+                  <input class="product-cost__input product-cost__input--from" type="text" name="from" id="cost-from"
+                    placeholder="0" value="0">
                 </label>
                 <label class="product-cost__cost product-cost__cost--to" for="cost-to">
-                  <input class="product-cost__input product-cost__input--to" type="text" name="to" id="cost-to" placeholder="900"
-                    value="900">
+                  <input class="product-cost__input product-cost__input--to" type="text" name="to" id="cost-to"
+                    placeholder="900" value="900">
                 </label>
               </div>
             </fieldset>

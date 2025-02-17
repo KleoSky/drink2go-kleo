@@ -33,6 +33,9 @@
   font-weight: 700;
   margin-bottom: 4px;
   letter-spacing: 0.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card__title {
@@ -87,18 +90,17 @@
   .card {
     width: 608px;
     display: grid;
-    grid-template-rows: 60px auto auto auto 60px auto;
+    grid-template-rows: auto auto;
   }
 
   .card__badge {
     text-align: center;
-    grid-row: 2 / 3;
+    margin-top: 30px;
   }
 
   .card__title {
     font-size: 56px;
     line-height: 1.43;
-    grid-row: 3 / 4;
     margin-bottom: 16px;
     letter-spacing: 1.1px;
   }
@@ -106,56 +108,57 @@
   .card__description {
     font-size: 20px;
     line-height: 1.6;
-    grid-row: 4 / 5;
     margin-bottom: 20px;
   }
 
   .card__price {
-    grid-row: 5 / 6;
     margin-bottom: 20px;
-    align-self: flex-start;
   }
 
   .card__link {
-    grid-row: 6 / 7;
     margin: 0;
+    grid-row: 2 / 3;
+  }
+
+  .card__content-wrapper {
+    grid-row: 1 / 2;
   }
 }
 
 @media (min-width: 1440px) {
   .card {
-    width: 1440px;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: 30px 150px auto auto auto 40px auto;
+    width: 1280px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .card__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
   }
 
   .card__link {
-    grid-column: 1 / 2;
-    grid-row: 2 / 8;
     margin: 0;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
   }
 
   .card__badge {
-    grid-column: 2 / 3;
-    grid-row: 3 / 4;
-    text-align: left;
+    align-self: flex-start;
   }
 
   .card__title {
-    grid-column: 2 / 4;
-    grid-row: 4 / 5;
     text-align: left;
   }
 
   .card__description {
     width: 625px;
-    grid-column: 2 / 4;
-    grid-row: 5 / 6;
     text-align: left;
   }
 
   .card__price {
-    grid-column: 2 / 3;
-    grid-row: 6 / 7;
+    align-self: flex-start;
   }
 }

@@ -25,6 +25,7 @@ const cards = document.querySelectorAll('.card');
 const prevButton = document.querySelector('.slider__button--prev');
 const nextButton = document.querySelector('.slider__button--next');
 const stepButton = document.querySelector('.slider__button-step');
+
 let currentCard = 0;
 
 function showCard(index) {
@@ -34,17 +35,14 @@ function showCard(index) {
 
     const bgType = cards[index].getAttribute('data-bg');
     sliderSection.className = `slider slider--${bgType}`;
-    stepButton.className = `slider__button-step slider__button-step--${bgType}`
+    stepButton.className = `slider__button-step slider__button-step--${bgType}`;
 
-    // Обновляем текущий слайд
     currentCard = index;
 
-    // Отключаем кнопки, если слайд первый или последний
     prevButton.disabled = index === 0;
     nextButton.disabled = index === cards.length - 1;
 }
 
-// Обработчики для кнопок
 prevButton.addEventListener('click', () => {
     if (currentCard > 0) {
         currentCard--;
@@ -60,3 +58,31 @@ nextButton.addEventListener('click', () => {
 });
 
 showCard(currentCard);
+
+// /* РЕАЛИЗУЕТ ПЕРЕКЛЮЧЕНИЕ СЛАЙДОВ ПО КНОПКАМ ПАГИНАЦИИ DESKTOP*/
+// document.addEventListener('DOMContentLoaded', function() {
+//   const cards = document.querySelectorAll('.card');
+//   const stepButtons = document.querySelectorAll('.slider__button-step');
+
+//   function switchCard(index) {
+//     cards.forEach(card => {
+//       card.style.display = 'none';
+//     });
+
+//     cards[index].style.display = 'block';
+
+//     buttons.forEach(button => {
+//       button.style.backgroundColor = '';
+//     });
+
+//     stepButtons[index].style.backgroundColor = '#7859cf';
+//   }
+
+//   stepButtons.forEach((button, index) => {
+//     button.addEventListener('click', () => {
+//       switchSlide(index);
+//     });
+//   });
+
+//   switchCard(0);
+// });
