@@ -1,1 +1,94 @@
-// Styles
+.pagination__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.pagination__link {
+  min-height: 40px;
+  font-size: 16px;
+  line-height: 1.5;
+  text-decoration: none;
+  color: var(--bg-accent, #000080);
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.pagination__link:not(.pagination__link--current) {
+  &:hover,
+  &:focus,
+  &:active,
+  &:disabled {
+    color: var(--bg-second, #ffffff);
+  }
+}
+
+.pagination__link--current {
+  font-weight: 600;
+  color: inherit;
+}
+
+.pagination__item {
+  min-width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--bg--primary, #ffffff);
+}
+
+.pagination__item--current {
+  background-color: inherit;
+  pointer-events: none;
+  cursor: default;
+}
+
+.pagination__link--prev:hover.pagination__link--prev::before,
+.pagination__link--prev:focus.pagination__link--prev::before,
+.pagination__link--prev:active.pagination__link--prev::before,
+.pagination__link--prev:disabled.pagination__link--prev::before,
+.pagination__link--next:hover.pagination__link--next::before,
+.pagination__link--next:focus.pagination__link--next::before,
+.pagination__link--next:active.pagination__link--next::before,
+.pagination__link--next:disabled.pagination__link--next::before {
+  border-color: var(--color-second, #ffffff);
+}
+
+.pagination__link--prev::before {
+  clip-path: polygon(0 0, 100% 100%, 0 100%);
+  left: 2px;
+}
+
+.pagination__link--next::before {
+  clip-path: polygon(100% 0, 100% 100%, 0 0);
+  left: -2px;
+}
+
+@media (max-width: 767px) {
+  .pagination__link-description {
+    display: none;
+  }
+
+  .pagination__link--prev::before,
+  .pagination__link--next::before {
+    content: "";
+    display: block;
+    position: relative;
+    width: 6px;
+    height: 6px;
+    border: 2px solid var(--bg-accent, #000080);
+    transform: rotate(45deg);
+    top: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .pagination__link--prev,
+  .pagination__link--next {
+    padding: 8px 20px;
+  }
+}

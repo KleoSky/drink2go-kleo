@@ -1,0 +1,14 @@
+.button-accent {
+  &:hover,
+  &:focus {
+    background-color: #9070ec;
+  }
+
+  &:active {
+    background-color: #593cac;
+  }
+
+  &:disabled {
+    background-color: var(--color-tertiary, #000080);
+  }
+}

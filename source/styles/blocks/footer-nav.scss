@@ -35,6 +35,14 @@
   color: var(--color-active, #000080);
 }
 
+.footer-nav__developer-image {
+  fill: var(--color-tertiary, #605f61);
+}
+
+.footer-nav__developer-image:hover {
+  fill: var(--bg-accent, #000080);
+}
+
 @media (min-width: 768px) {
   .footer-nav__social {
     width: 728px;
