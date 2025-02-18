@@ -93,3 +93,29 @@
 .product-cost__cost--to {
   grid-column: 3 / 4;
 }
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .product-cost__slider {
+    width: 192px;
+  }
+
+  .product-cost__slider-wrapper::before {
+    width: 230px;
+  }
+
+  .product-cost__input-wrapper {
+    grid-template-columns: max-content 48px max-content;
+
+    &::before {
+      left: 111px;
+    }
+  }
+
+  .product-cost__input {
+    width: 87px;
+  }
+
+  .product-cost__cost {
+    width: 87px;
+  }
+}

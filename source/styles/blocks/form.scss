@@ -145,3 +145,31 @@
     color: var(--bg-second, #ffffff);
   }
 }
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .form__product-cost {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
+
+  .form__choice--taste {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+  }
+
+  .form__choice--origin {
+    grid-row: 1 / 2;
+    grid-column: 3 / 4;
+  }
+
+  .form__buttons {
+    flex-direction: row;
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+
+  .form__button {
+    padding: 8px 20px;
+  }
+}
