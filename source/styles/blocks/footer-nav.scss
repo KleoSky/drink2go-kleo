@@ -20,6 +20,23 @@
   font-size: 12px;
   line-height: 1.33;
   color: var(--color-tertiary, #605f61);
+
+  &::after {
+    content: "";
+    display: block;
+    width: 112px;
+    height: 16px;
+    background-color: var(--color-tertiary, #000080);
+    mask-image: url("../../icons/stack.svg#developer-logo-default");
+  }
+}
+
+.footer-nav__developer-link:hover.footer-nav__developer-link::after {
+  background-color: var(--bg-accent, #000080);
+}
+
+.footer-nav__developer-link:active.footer-nav__developer-link::after {
+  background-color: #593cac;
 }
 
 .footer-nav__developer-link .footer-nav__developer-logo {

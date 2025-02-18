@@ -13,7 +13,8 @@
   height: 40px;
   box-sizing: border-box;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: var(--bg-condition, #c6b8cf);
   }
 
@@ -22,15 +23,18 @@
   }
 }
 
-.social__link:hover.social__link--vk::before {
+.social__link:hover.social__link--vk::before,
+.social__link:focus.social__link--vk::before {
   background-image: url("../../icons/stack.svg#vk-colored");
 }
 
-.social__link:hover.social__link--pt::before {
+.social__link:hover.social__link--pt::before,
+.social__link:focus.social__link--pt::before {
   background-image: url("../../icons/stack.svg#pinterest-colored");
 }
 
-.social__link:hover.social__link--ok::before {
+.social__link:hover.social__link--ok::before,
+.social__link:focus.social__link--ok::before {
   background-image: url("../../icons/stack.svg#ok-colored");
 }
 

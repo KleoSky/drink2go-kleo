@@ -87,4 +87,9 @@
   .product__image-link {
     margin-bottom: 29px;
   }
+
+  .product__image-link:hover.products__item,
+  .product__link:hover.products__item {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  }
 }

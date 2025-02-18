@@ -185,6 +185,14 @@
     background-color: var(--bg-primary, #ffffff);
   }
 
+  .slider__button-step:hover {
+    background-color: rgba(120, 89, 207, 0.25);
+  }
+
+  .slider__button-step:active {
+    background-color: var(--bg-accent, #000080);
+  }
+
   .slider__button-step--flat,
   .slider__button-step--latte,
   .slider__button-step--espresso {
