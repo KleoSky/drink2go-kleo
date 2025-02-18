@@ -30,6 +30,10 @@
   gap: 10px;
 }
 
+.form__choice-input {
+  cursor: pointer;
+}
+
 .form__choice-input--radio {
   appearance: none;
   margin: 0;
@@ -39,19 +43,37 @@
   border: 2px solid var(--color-tertiary, #000080);
 }
 
-.form__choice-input--radio:checked {
+.form__choice-input--radio:disabled {
+  border: 2px solid #e2e2e2;
+}
+
+.form__choice-input--radio:disabled:hover,
+.form__choice-input--radio:disabled:focus {
+  border: 2px solid #e2e2e2;
+}
+
+.form__choice-input--radio:checked,
+.form__choice-input--radio:hover,
+.form__choice-input--radio:focus {
   border: 2px solid var(--bg-accent, #000080);
 }
 
-.form__choice-input--radio:disabled {
-  border: 2px solid #e2e2e2;
+.form__choice-input--radio:hover.form__choice-input--radio::before,
+.form__choice-input--radio:focus.form__choice-input--radio::before {
+  background-color: rgba(120, 89, 207, 0.25);
+}
+
+.form__choice-input--radio:disabled:hover.form__choice-input--radio::before,
+.form__choice-input--radio:disabled:focus.form__choice-input--radio::before {
+  background-color: var(--bg-primary, #ffffff);
 }
 
 .form__choice-input--radio:disabled ~ .form__choice-label {
   color: var(--color-tertiary, #000080);
 }
 
-.form__choice-input--radio:checked.form__choice-input--radio::before {
+.form__choice-input--radio:checked.form__choice-input--radio::before,
+.form__choice-input--radio::before {
   content: "";
   display: block;
   width: 16px;
@@ -64,18 +86,29 @@
   left: 2px;
 }
 
+.form__choice-input--radio.form__choice-input--radio::before {
+  background-color: var(--color-second, #000080);
+}
+
+.form__choice-input--radio:disabled:checked.form__choice-input--radio::before {
+  background-color: var(--color-tertiary, #000080);
+}
+
 .form__choice-input--checkbox {
   appearance: none;
   display: block;
   min-width: 42px;
   height: 24px;
+  border: 2px solid transparent;
   border-radius: 12px;
   background-color: var(--color-tertiary, #000080);
   margin: 0;
 }
 
-.form__choice-input--checkbox:checked {
-  background-color: var(--bg-accent, #000080);
+.form__choice-input--checkbox:hover,
+.form__choice-input--checkbox:focus {
+  border-color: var(--bg-accent, #000080);
+  background-color: rgba(120, 89, 207, 0.25);
 }
 
 .form__choice-input--checkbox::before {
@@ -84,25 +117,44 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  border: 2px solid var(--color-tertiary, #000080);
   background-color: var(--bg-primary, #ffffff);
   position: relative;
+  top: 0;
+  left: 0;
 }
 
 .form__choice-input--checkbox:checked.form__choice-input--checkbox::before {
   border: 2px solid var(--bg-accent, #000080);
   left: 100%;
+  top: -2px;
   transform: translateX(-100%);
 }
 
+.form__choice-input--checkbox:checked {
+  background-color: var(--bg-accent, #000080);
+  border: 2px solid transparent;
+}
+
 .form__choice-input--checkbox:disabled {
-  border: 2px solid #e2e2e2;
   background-color: #e2e2e2;
 }
 
+.form__choice-input--checkbox:disabled:hover,
+.form__choice-input--checkbox:disabled:focus {
+  border-color: #e2e2e2;
+}
+
+.form__choice-input--checkbox:disabled:checked.form__choice-input--checkbox::before {
+  background-color: var(--color-tertiary, #000080);
+}
+
+.form__choice-input--radio:disabled,
+.form__choice-input--checkbox:disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
 .form__choice-input--checkbox:disabled.form__choice-input--checkbox::before {
-  top: -2px;
-  left: -2px;
   border-color: #e2e2e2;
 }
 

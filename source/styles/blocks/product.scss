@@ -38,6 +38,10 @@
   align-self: first baseline;
 }
 
+.product-cost__slider:disabled {
+  background-color: #bdbdbd;
+}
+
 .product__button {
   font-size: 14px;
   line-height: 1.43;
