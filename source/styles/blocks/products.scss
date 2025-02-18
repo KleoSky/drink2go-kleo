@@ -91,7 +91,7 @@
 
 @media (min-width: 1440px) {
   .products__wrapper {
-    padding-top: 36px;
+    padding-top: 0;
   }
 
   .products__select-wrapper {
@@ -101,5 +101,10 @@
   .products__list {
     grid-template-columns: repeat(3, 317px);
     margin-bottom: 60px;
+  }
+
+  .products__item {
+    padding-right: 30px;
+    padding-left: 30px;
   }
 }
