@@ -64,6 +64,7 @@
 }
 
 .products__item {
+  min-height: 420px;
   padding: 40px 20px 20px;
   background-color: var(--bg-primary, #000080);
   border-radius: 4px;
@@ -90,6 +91,7 @@
   }
 
   .products__item {
+    min-height: 440px;
     padding-top: 50px;
     padding-bottom: 30px;
   }
@@ -114,6 +116,7 @@
   }
 
   .products__item {
+    min-height: 460px;
     padding-right: 30px;
     padding-left: 30px;
   }

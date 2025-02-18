@@ -95,7 +95,7 @@
     width: 1360px;
     grid-row: 4 / 5;
     display: grid;
-    grid-template-columns: max-content auto;
+    grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(4, auto);
     column-gap: 30px;
   }
