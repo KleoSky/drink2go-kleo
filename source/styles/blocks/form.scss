@@ -177,3 +177,18 @@
     margin-bottom: 40px;
   }
 }
+
+@media (min-width: 1440px) {
+  .form__buttons {
+    flex-direction: row;
+  }
+
+  .form__button {
+    width: 149px;
+    padding: 8px 26px;
+  }
+
+  .form__choice-title {
+    margin-bottom: 20px;
+  }
+}
