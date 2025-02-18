@@ -16,6 +16,7 @@
 
 .products__select-wrapper select {
   appearance: none;
+  cursor: pointer;
   padding: 4px 28px 4px 10px;
   font-family: inherit;
   font-size: 16px;
@@ -28,6 +29,15 @@
   width: 165px;
   height: 32px;
   border: none;
+}
+
+.products__select-wrapper select:hover,
+.products__select-wrapper select:focus {
+  background-color: #f0ebff;
+}
+
+.products__select-wrapper select:focus .products__select-wrapper::before {
+  background-image: url("../../icons/stack.svg#select-icon-opened");
 }
 
 .products__select-wrapper::before {
@@ -54,6 +64,7 @@
 }
 
 .products__item {
+  min-height: 420px;
   padding: 40px 20px 20px;
   background-color: var(--bg-primary, #000080);
   border-radius: 4px;
@@ -80,6 +91,7 @@
   }
 
   .products__item {
+    min-height: 440px;
     padding-top: 50px;
     padding-bottom: 30px;
   }
@@ -104,6 +116,7 @@
   }
 
   .products__item {
+    min-height: 460px;
     padding-right: 30px;
     padding-left: 30px;
   }
