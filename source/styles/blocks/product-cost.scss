@@ -100,7 +100,7 @@
   }
 
   .product-cost__slider-wrapper::before {
-    width: 230px;
+    width: 223px;
   }
 
   .product-cost__input-wrapper {
@@ -108,6 +108,7 @@
 
     &::before {
       left: 111px;
+      top: 107px;
     }
   }
 
@@ -117,5 +118,16 @@
 
   .product-cost__cost {
     width: 87px;
+  }
+}
+
+@media (min-width: 768px) {
+  .product-cost__title {
+    padding: 0;
+    margin-bottom: 18px;
+  }
+
+  .product-cost__slider-wrapper {
+    margin-bottom: 20px;
   }
 }
