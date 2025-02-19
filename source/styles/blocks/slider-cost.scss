@@ -15,12 +15,13 @@
   display: block;
   width: 16px;
   height: 16px;
-  background-color: #ffffff;
+  background-color: var(--bg-primary, #ffffff);
   border-radius: 50%;
   border: transparent;
   position: relative;
   top: 0;
-  left: -4px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .slider-cost__toggle--min::before {

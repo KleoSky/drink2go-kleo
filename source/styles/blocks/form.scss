@@ -83,7 +83,8 @@
   background-color: var(--bg-accent, #000080);
   position: relative;
   top: 2px;
-  left: 2px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .form__choice-input--radio.form__choice-input--radio::before {
