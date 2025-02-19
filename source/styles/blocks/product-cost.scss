@@ -2,7 +2,7 @@
   font-size: 16px;
   line-height: 1.5;
   font-weight: 600;
-  margin-bottom: 21px;
+  margin-bottom: 19px;
 }
 
 .product-cost__slider-wrapper {
@@ -10,7 +10,6 @@
   height: 24px;
   display: grid;
   grid-template-columns: 1fr;
-  padding-top: 7px;
   margin-bottom: 24px;
   box-sizing: border-box;
   position: relative;
@@ -104,8 +103,13 @@
     margin-bottom: 18px;
   }
 
+  .product-cost__slider {
+    width: 222px;
+  }
+
   .product-cost__slider-wrapper {
     margin-bottom: 20px;
+    width: 223px;
   }
 
   .product-cost__input-wrapper {

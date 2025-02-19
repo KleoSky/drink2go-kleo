@@ -64,24 +64,20 @@
 .slider__button--prev:hover,
 .slider__button--prev:focus,
 .slider__button--prev:focus-visible {
-  background-color: #ffffff;
   background-image: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
 }
 
 .slider__button--next:hover,
 .slider__button--next:focus,
 .slider__button--next:focus-visible {
-  background-color: #ffffff;
   background-image: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
 }
 
 .slider__button--prev:active {
-  background-color: #ffffff;
   background-image: linear-gradient(to right, rgba(120, 89, 207, 0.25), rgba(120, 89, 207, 0));
 }
 
 .slider__button--next:active {
-  background-color: #ffffff;
   background-image: linear-gradient(to left, rgba(120, 89, 207, 0.25), rgba(120, 89, 207, 0));
 }
 

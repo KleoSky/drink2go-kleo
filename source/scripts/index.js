@@ -59,7 +59,7 @@ nextButton.addEventListener('click', () => {
 
 showCard(currentCard);
 
-// /* РЕАЛИЗУЕТ ПЕРЕКЛЮЧЕНИЕ СЛАЙДОВ ПО КНОПКАМ ПАГИНАЦИИ DESKTOP*/
+// /* ПОПЫТКА РЕАЛИЗАЦИИ ПЕРЕКЛЮЧЕНИЯ СЛАЙДОВ ПО КНОПКАМ ПАГИНАЦИИ DESKTOP*/
 // document.addEventListener('DOMContentLoaded', function() {
 //   const cards = document.querySelectorAll('.card');
 //   const stepButtons = document.querySelectorAll('.slider__button-step');
@@ -68,7 +68,6 @@ showCard(currentCard);
 //     cards.forEach(card => {
 //       card.style.display = 'none';
 //     });
-
 //     cards[index].style.display = 'block';
 
 //     buttons.forEach(button => {
