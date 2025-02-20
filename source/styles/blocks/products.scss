@@ -9,7 +9,7 @@
 .products__select-wrapper {
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
   margin-bottom: 16px;
   position: relative;
 }
@@ -26,8 +26,8 @@
   background-color: inherit;
   text-align: left;
   text-transform: lowercase;
-  width: 165px;
-  height: 32px;
+  min-width: 165px;
+  min-height: 32px;
   border: none;
   box-sizing: border-box;
 
@@ -42,7 +42,7 @@
   padding-right: 28px;
   background-size: 10px 10px;
   background-repeat: no-repeat;
-  background-position: 145px 10px;
+  background-position: 94% 10px;
 }
 
 .products__select-button--default {
@@ -60,7 +60,7 @@
   list-style: none;
   position: absolute;
   top: 32px;
-  left: 117px;
+  left: 42%;
   z-index: 1;
   display: none;
 }
@@ -69,7 +69,6 @@
   display: block;
 }
 
-// .products__select-list--opened.products__select-item:hover
 
 .products__select-item {
   background-color: var(--bg-catalog, #ffffff);

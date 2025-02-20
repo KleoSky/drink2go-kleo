@@ -62,6 +62,7 @@ showCard(currentCard);
 /* ОТКРЫВАЕТ SELECT*/
 const selectButton = document.querySelector('.products__select-button');
 const selectList = document.querySelector('.products__select-list');
+const selectItem = document.querySelector('.products__select-item');
 
 selectList.classList.remove('products__select-list--opened');
 selectList.classList.add('products__select-list--default');
@@ -79,6 +80,54 @@ selectButton.addEventListener('click', ()=> {
     selectList.classList.remove('products__select-list--opened');
   }
 })
+
+selectList.addEventListener('click', function(event) {
+  if (event.target.tagName === 'LI') {
+    selectButton.textContent = event.target.textContent;
+    selectItem.style.width = selectButton.style.width;
+  }
+})
+
+/* noUiSlider */
+noUiSlider.create(rangeSlider, {
+  start: [0, 920],
+  connect: true,
+  cssPrefix: 'range__',
+  range: {
+    min: 0,
+    max: 1000,
+  },
+  step: 10,
+  handleAttributes: [{ 'aria-label': 'Меньше' }, { 'aria-label': 'Больше' }],
+  animate: false,
+});
+
+/* Link range with inputs */
+
+rangeSlider.noUiSlider.on('slide', (values, handle) => {
+  rangeInputs[handle].value = Math.round(values[handle]);
+});
+
+rangeInputs.forEach((input, index) => {
+  const values = [];
+  input.addEventListener('change', (evt) => {
+    values[index] = evt.target.value;
+    rangeSlider.noUiSlider.set(values);
+  });
+});
+
+/* Validate Range Inputs */
+
+rangeInputs.forEach((input) => {
+  input.addEventListener('input', (evt) => {
+    if (Number(evt.target.value) > Number(input.max)) {
+      input.value = input.max;
+    }
+  });
+});
+
+/* Reset range */
+form.addEventListener('reset', () => rangeSlider.noUiSlider.set([0, 1000]));
 
 // /* ПОПЫТКА РЕАЛИЗАЦИИ ПЕРЕКЛЮЧЕНИЯ СЛАЙДОВ ПО КНОПКАМ ПАГИНАЦИИ DESKTOP*/
 // document.addEventListener('DOMContentLoaded', function() {
