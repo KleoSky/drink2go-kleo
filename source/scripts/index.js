@@ -59,6 +59,27 @@ nextButton.addEventListener('click', () => {
 
 showCard(currentCard);
 
+/* ОТКРЫВАЕТ SELECT*/
+const selectButton = document.querySelector('.products__select-button');
+const selectList = document.querySelector('.products__select-list');
+
+selectList.classList.remove('products__select-list--opened');
+selectList.classList.add('products__select-list--default');
+
+selectButton.addEventListener('click', ()=> {
+  if (selectList.classList.contains('products__select-list--default')) {
+    selectButton.classList.remove('products__select-button--default');
+    selectButton.classList.add('products__select-button--pressed');
+    selectList.classList.remove('products__select-list--default');
+    selectList.classList.add('products__select-list--opened');
+  } else {
+    selectButton.classList.add('products__select-button--default');
+    selectButton.classList.remove('products__select-button--pressed');
+    selectList.classList.add('products__select-list--default');
+    selectList.classList.remove('products__select-list--opened');
+  }
+})
+
 // /* ПОПЫТКА РЕАЛИЗАЦИИ ПЕРЕКЛЮЧЕНИЯ СЛАЙДОВ ПО КНОПКАМ ПАГИНАЦИИ DESKTOP*/
 // document.addEventListener('DOMContentLoaded', function() {
 //   const cards = document.querySelectorAll('.card');
