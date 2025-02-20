@@ -279,30 +279,33 @@
             <div class="products__wrapper">
               <div class="products__select-wrapper">
                 <h3 class="products__select-title">Сортировка:</h3>
-                <select name="products__select-type" id="select-type">
-                  <option class="products__select-option" value="По умолчанию">По умолчанию</option>
-                  <option class="products__select-option" value="Сначала дешёвые">Сначала дешёвые</option>
-                  <option class="products__select-option" value="Сначала дорогие">Сначала дорогие</option>
-                </select>
+                <div class="products__select-type">
+                  <button class="products__select-button products__select-button--default" type="button">По умолчанию</button>
+                  <ul class="products__select-list products__select-list--opened">
+                    <li class="products__select-item">По умолчанию</li>
+                    <li class="products__select-item">Сначала дешёвые</li>
+                    <li class="products__select-item">Сначала дорогие</li>
+                  </ul>
+                </div>
               </div>
               <ul class="products__list">
                 <li class="products__item product">
-                    <a class="product__image-link" href="#" tabindex="-1">
-                      <picture>
-                        <source width="130" height="188" type="image/webp"
-                          srcset="images/coffee-pot-1@1x.webp 1x, images/coffee-pot-1@2x.webp 2x">
-                        <img src="images/coffee-pot-1@1x.png" srcset="images/coffee-pot-1@2x.png 2x" width="130"
-                          height="188" alt="Баночка с кофейным напитком">
-                      </picture>
-                    </a>
-                    <h3 class="product__title">
-                      <a class="product__link" href="#">Декаф Флэт Уайт</a>
-                    </h3>
-                    <p class="product__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                    <div class="product__cost-wrapper">
-                      <p class="product__cost">225₽</p>
-                      <button class="product__button button-accent" type="button">В корзину</button>
-                    </div>
+                  <a class="product__image-link" href="#" tabindex="-1">
+                    <picture>
+                      <source width="130" height="188" type="image/webp"
+                        srcset="images/coffee-pot-1@1x.webp 1x, images/coffee-pot-1@2x.webp 2x">
+                      <img src="images/coffee-pot-1@1x.png" srcset="images/coffee-pot-1@2x.png 2x" width="130"
+                        height="188" alt="Баночка с кофейным напитком">
+                    </picture>
+                  </a>
+                  <h3 class="product__title">
+                    <a class="product__link" href="#">Декаф Флэт Уайт</a>
+                  </h3>
+                  <p class="product__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                  <div class="product__cost-wrapper">
+                    <p class="product__cost">225₽</p>
+                    <button class="product__button button-accent" type="button">В корзину</button>
+                  </div>
                 </li>
                 <li class="products__item product">
                   <a class="product__image-link" href="#" tabindex="-1">

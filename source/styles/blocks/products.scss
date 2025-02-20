@@ -3,7 +3,7 @@
   line-height: 1.5;
   font-weight: 600;
   margin: 0;
-  margin-right: 8px;
+  margin-right: 10px;
 }
 
 .products__select-wrapper {
@@ -14,43 +14,70 @@
   position: relative;
 }
 
-.products__select-wrapper select {
-  appearance: none;
+.products__select-button,
+.products__select-item {
   cursor: pointer;
-  padding: 4px 28px 4px 10px;
+  padding: 4px;
   font-family: inherit;
   font-size: 16px;
   line-height: 1.5;
   font-weight: 600;
   color: var(--bg-accent, #000080);
   background-color: inherit;
-  text-align: center;
+  text-align: left;
   text-transform: lowercase;
   width: 165px;
   height: 32px;
   border: none;
+  box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    background-color: #f0ebff;
+  }
 }
 
-.products__select-wrapper select:hover,
-.products__select-wrapper select:focus {
-  background-color: #f0ebff;
-}
-
-.products__select-wrapper::before {
-  content: "";
-  display: block;
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  top: 50%;
-  left: 260px;
-  transform: translateY(-50%);
-  background-image: url("../../icons/stack.svg#select-icon");
+.products__select-button {
+  padding-left: 10px;
+  padding-right: 28px;
   background-size: 10px 10px;
+  background-repeat: no-repeat;
+  background-position: 145px 10px;
 }
 
-.products__select-wrapper select:focus .products__select-wrapper::before {
+.products__select-button--default {
+  background-image: url("../../icons/stack.svg#select-icon");
+}
+
+.products__select-button--pressed {
   background-image: url("../../icons/stack.svg#select-icon-opened");
+}
+
+.products__select-list,
+.products__select-list--default {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  top: 32px;
+  left: 117px;
+  z-index: 1;
+  display: none;
+}
+
+.products__select-list--opened {
+  display: block;
+}
+
+// .products__select-list--opened.products__select-item:hover
+
+.products__select-item {
+  background-color: var(--bg-catalog, #ffffff);
+
+  &:hover,
+  &:focus {
+    background-color: #f0ebff;
+  }
 }
 
 .products__list {
@@ -71,6 +98,8 @@
   border-radius: 4px;
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 0;
 
   &:has(a):hover,
   &:has(a):focus-within {
