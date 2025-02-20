@@ -46,14 +46,14 @@
           </ul>
         </nav>
         <div class="header__user-menu user-menu">
-          <button class="user-menu__button user-menu__button--personal" type="button">
+          <a class="user-menu__button user-menu__button--personal" type="button">
             <span class="visually-hidden">Перейти в личный кабинет</span>
             <span class="user-menu__description">Войти</span>
-          </button>
-          <button class="user-menu__button user-menu__button--basket" type="button">
+          </a>
+          <a class="user-menu__button user-menu__button--basket" type="button">
             <span class="visually-hidden">Перейти в корзину</span>
             <span class="user-menu__description">Корзина</span>
-          </button>
+          </a>
           <button class="user-menu__button button-burger button-burger--closed js-toggle-button" type="button">
             <span class="visually-hidden">Перейти в меню навигации</span>
           </button>
@@ -226,11 +226,13 @@
             <fieldset class="form__choice form__choice--taste">
               <legend class="form__choice-title">Наличие молока</legend>
               <label class="form__label">
-                <input class="form__choice-input form__choice-input--radio" type="radio" name="milk" value="Не важно" checked>
+                <input class="form__choice-input form__choice-input--radio" type="radio" name="milk" value="Не важно"
+                  checked>
                 <span class="form__choice-label">Неважно</span>
               </label>
               <label class="form__label">
-                <input class="form__choice-input form__choice-input--radio" type="radio" name="milk" value="Только животное">
+                <input class="form__choice-input form__choice-input--radio" type="radio" name="milk"
+                  value="Только животное">
                 <span class="form__choice-label">Только животное</span>
               </label>
               <label class="form__label">
@@ -239,7 +241,8 @@
                 <span class="form__choice-label">Только растительное</span>
               </label>
               <label class="form__label">
-                <input class="form__choice-input form__choice-input--radio" type="radio" name="milk" value="Без молока" disabled>
+                <input class="form__choice-input form__choice-input--radio" type="radio" name="milk" value="Без молока"
+                  disabled>
                 <span class="form__choice-label">Без молока</span>
               </label>
             </fieldset>
@@ -284,22 +287,22 @@
               </div>
               <ul class="products__list">
                 <li class="products__item product">
-                  <a class="product__image-link" href="#" tabindex="-1">
-                    <picture>
-                      <source width="130" height="188" type="image/webp"
-                        srcset="images/coffee-pot-1@1x.webp 1x, images/coffee-pot-1@2x.webp 2x">
-                      <img src="images/coffee-pot-1@1x.png" srcset="images/coffee-pot-1@2x.png 2x" width="130"
-                        height="188" alt="Баночка с кофейным напитком">
-                    </picture>
-                  </a>
-                  <h3 class="product__title">
-                    <a class="product__link" href="#">Декаф Флэт Уайт</a>
-                  </h3>
-                  <p class="product__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                  <div class="product__cost-wrapper">
-                    <p class="product__cost">225₽</p>
-                    <button class="product__button button-accent" type="button">В корзину</button>
-                  </div>
+                    <a class="product__image-link" href="#" tabindex="-1">
+                      <picture>
+                        <source width="130" height="188" type="image/webp"
+                          srcset="images/coffee-pot-1@1x.webp 1x, images/coffee-pot-1@2x.webp 2x">
+                        <img src="images/coffee-pot-1@1x.png" srcset="images/coffee-pot-1@2x.png 2x" width="130"
+                          height="188" alt="Баночка с кофейным напитком">
+                      </picture>
+                    </a>
+                    <h3 class="product__title">
+                      <a class="product__link" href="#">Декаф Флэт Уайт</a>
+                    </h3>
+                    <p class="product__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                    <div class="product__cost-wrapper">
+                      <p class="product__cost">225₽</p>
+                      <button class="product__button button-accent" type="button">В корзину</button>
+                    </div>
                 </li>
                 <li class="products__item product">
                   <a class="product__image-link" href="#" tabindex="-1">
@@ -398,7 +401,7 @@
             <h2 class="visually-hidden">Переход на другие страницы каталога</h2>
             <ul class="pagination__list">
               <li class="pagination__item">
-                <a class="pagination__link pagination__link--prev button-accent" href="#" >
+                <a class="pagination__link pagination__link--prev button-accent" href="#">
                   <span class="pagination__link-description">Назад</span>
                 </a>
               </li>
