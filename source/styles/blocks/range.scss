@@ -182,33 +182,12 @@
     margin-bottom: 18px;
   }
 
-  // .product-cost__slider {
-  //   width: 222px;
-  // }
-
-  // .product-cost__slider-wrapper {
-  //   margin-bottom: 20px;
-  //   width: 223px;
-  // }
-
   .range__input-wrapper {
     grid-template-columns: max-content 48px max-content;
   }
 }
 
 @media (min-width: 1440px) {
-  // .product-cost__slider-wrapper {
-  //   margin-bottom: 22px;
-  // }
-
-  // .product-cost__slider {
-  //   width: 274px;
-  // }
-
-  // .product-cost__slider-wrapper::before {
-  //   width: 318px;
-  // }
-
   .range__title {
     margin-bottom: 21px;
   }

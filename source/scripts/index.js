@@ -91,6 +91,7 @@ selectList.addEventListener('click', function(event) {
 /* noUiSlider */
 const rangeSlider = document.querySelector('.range__slider');
 const rangeInputs = document.querySelectorAll('.range__input');
+const form = document.querySelector('.catalog__form');
 
 noUiSlider.create(rangeSlider, {
   start: [0, 900],
@@ -117,7 +118,7 @@ rangeInputs.forEach((input, index) => {
   });
 });
 
-form.addEventListener('reset', () => rangeSlider.noUiSlider.set([0, 1000]));
+form.addEventListener('reset', () => rangeSlider.noUiSlider.set([0, 900]));
 
 // /* ПОПЫТКА РЕАЛИЗАЦИИ ПЕРЕКЛЮЧЕНИЯ СЛАЙДОВ ПО КНОПКАМ ПАГИНАЦИИ DESKTOP*/
 // document.addEventListener('DOMContentLoaded', function() {
