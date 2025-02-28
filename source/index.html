@@ -12,7 +12,6 @@
   <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="favicons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <script src="scripts/index.js" defer></script>
 </head>
 
 <body class="body">
@@ -200,25 +199,16 @@
         <p class="catalog__badge">Каталог</p>
         <div class="catalog__wrapper">
           <form class="catalog__form form" action=" https://echo.htmlacademy.ru" method="get">
-            <fieldset class="form__product-cost product-cost">
-              <legend class="product-cost__title">Цена</legend>
-              <div class="product-cost__slider-wrapper">
-                <div class="product-cost__slider slider-cost">
-                  <button class="slider-cost__toggle slider-cost__toggle--min" type="button">
-                    <span class="visually-hidden">Выбор минимальной стоимости</span>
-                  </button>
-                  <button class="slider-cost__toggle slider-cost__toggle--max" type="button">
-                    <span class="visually-hidden">Выбор максимальной стоимости</span>
-                  </button>
-                </div>
-              </div>
-              <div class="product-cost__input-wrapper">
-                <label class="product-cost__cost product-cost__cost--from" for="cost-from">
-                  <input class="product-cost__input product-cost__input--from" type="text" name="from" id="cost-from"
+            <fieldset class="form__product-cost range">
+              <legend class="range__title">Цена</legend>
+              <div class="range__slider"></div>
+              <div class="range__input-wrapper">
+                <label class="range__cost range__cost--from" for="cost-from">
+                  <input class="range__input range__input--from" type="text" name="from" id="cost-from"
                     placeholder="0">
                 </label>
-                <label class="product-cost__cost product-cost__cost--to" for="cost-to">
-                  <input class="product-cost__input product-cost__input--to" type="text" name="to" id="cost-to"
+                <label class="range__cost range__cost--to" for="cost-to">
+                  <input class="range__input range__input--to" type="text" name="to" id="cost-to"
                     placeholder="900" value="900">
                 </label>
               </div>
@@ -538,6 +528,9 @@
       </div>
     </footer>
   </div>
+  <script src="./vendor/noUiSlider/nouislider.js" defer></script>
+  <script src="./vendor/swiper/swiper-bundle.min.js" defer></script>
+  <script src="scripts/index.js" defer></script>
 </body>
 
 </html>
