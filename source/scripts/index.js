@@ -66,6 +66,7 @@ const selectItem = document.querySelector('.products__select-item');
 
 selectList.classList.remove('products__select-list--opened');
 selectList.classList.add('products__select-list--default');
+selectItem.style.width = selectButton.style.width;
 
 selectButton.addEventListener('click', ()=> {
   if (selectList.classList.contains('products__select-list--default')) {
@@ -118,7 +119,6 @@ rangeInputs.forEach((input, index) => {
   });
 });
 
-createSlider();
 form.addEventListener('reset', () => rangeSlider.noUiSlider.set([0, 900]));
 
 // /* ПОПЫТКА РЕАЛИЗАЦИИ ПЕРЕКЛЮЧЕНИЯ СЛАЙДОВ ПО КНОПКАМ ПАГИНАЦИИ DESKTOP*/

@@ -72,6 +72,7 @@
 
 .products__select-item {
   background-color: var(--bg-catalog, #ffffff);
+  text-overflow: ellipsis;
 
   &:hover,
   &:focus {
