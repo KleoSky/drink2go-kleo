@@ -93,7 +93,7 @@ const rangeSlider = document.querySelector('.range__slider');
 const rangeInputs = document.querySelectorAll('.range__input');
 const form = document.querySelector('.catalog__form');
 
-noUiSlider.create(rangeSlider, {
+const createSlider = noUiSlider.create(rangeSlider, {
   start: [0, 900],
   connect: true,
   cssPrefix: 'range__',
@@ -118,6 +118,7 @@ rangeInputs.forEach((input, index) => {
   });
 });
 
+createSlider();
 form.addEventListener('reset', () => rangeSlider.noUiSlider.set([0, 900]));
 
 // /* ПОПЫТКА РЕАЛИЗАЦИИ ПЕРЕКЛЮЧЕНИЯ СЛАЙДОВ ПО КНОПКАМ ПАГИНАЦИИ DESKTOP*/
