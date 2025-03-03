@@ -26,7 +26,7 @@
   background-color: inherit;
   text-align: left;
   text-transform: lowercase;
-  min-width: 165px;
+  width: 165px;
   min-height: 32px;
   border: none;
   box-sizing: border-box;
@@ -43,6 +43,9 @@
   background-size: 10px 10px;
   background-repeat: no-repeat;
   background-position: 94% 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .products__select-button--default {
@@ -72,7 +75,6 @@
 
 .products__select-item {
   background-color: var(--bg-catalog, #ffffff);
-  text-overflow: ellipsis;
 
   &:hover,
   &:focus {
